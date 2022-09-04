@@ -13,9 +13,10 @@ code {
 }
 
 #root {
+  background-color: rgb(228, 228, 228);
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 * {

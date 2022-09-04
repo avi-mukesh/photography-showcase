@@ -5,15 +5,27 @@ import image4 from "./images/web/04.webp"
 
 // const IMAGE_PATH = "./images/web"
 class Image {
-    constructor(src, location) {
+    constructor(src, alt, location) {
         this.src = src
+        this.alt = alt
         this.location = location
     }
 }
 
 export const bgImages = [
-    new Image(image1, "Somewhere"),
-    new Image(image2, "Somewhere"),
-    new Image(image3, "Somewhere"),
-    new Image(image4, "Somewhere"),
+    new Image(image1, "alt text", "Somewhere"),
+    new Image(image2, "alt text", "Somewhere"),
+    new Image(image3, "alt text", "Somewhere"),
+    new Image(image4, "alt text", "Somewhere"),
+]
+
+export const galleryImages = [
+    new Image(image1, "alt text", "Somewhere"),
+    new Image(image2, "alt text", "Somewhere"),
+    new Image(image3, "alt text", "Somewhere"),
+    new Image(image4, "alt text", "Somewhere"),
+    new Image(image1, "alt text", "Somewhere"),
+    new Image(image2, "alt text", "Somewhere"),
+    new Image(image3, "alt text", "Somewhere"),
+    new Image(image4, "alt text", "Somewhere"),
 ]

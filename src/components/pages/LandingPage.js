@@ -1,19 +1,23 @@
 // components
-import React from "react"
+import React, { useState } from "react"
 import Background from "../Background"
 import BackgroundImage from "../BackgroundImage"
 
 import { bgImages } from "../../Images.js"
-import LandingPageHeading from "../LandingPageHeader"
+import PageHeader from "./PageHeader"
 
 const LandingPage = () => {
     return (
         <>
-            <Background>
-                <LandingPageHeading />
+            <PageHeader title="AVI PHOTO" positionMiddle={true} />
 
+            <Background>
                 {bgImages.map((image, i) => (
-                    <BackgroundImage bgSource={image.src} key={i} />
+                    <BackgroundImage
+                        bgSource={image.src}
+                        key={i}
+                        index={i}
+                    />
                 ))}
             </Background>
         </>
