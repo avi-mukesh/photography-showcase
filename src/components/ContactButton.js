@@ -2,11 +2,12 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const ContactButton = ({ brand }) => {
+const ContactButton = ({ brand, link }) => {
+    console.log(link)
     return (
-        <Link to="/">
+        <a href={link} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={["fab", brand]}></FontAwesomeIcon>
-        </Link>
+        </a>
     )
 }
 

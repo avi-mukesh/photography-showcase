@@ -1,7 +1,8 @@
 $header-font-color: white;
 $bg-color-light: rgb(228, 228, 228);
 $bg-color-dark: rgb(47, 47, 47);
-$link-hover-color: rgb(192, 192, 192);
+$nav-link-hover-color: rgb(192, 192, 192);
+$a-link-hover-color: rgb(10, 10, 10);
 $transclucent: 0.8;
 
 // BIG UI COMPONENTS
@@ -39,10 +40,7 @@ $transclucent: 0.8;
         height: 100%;
         padding: 0 1rem 1rem 1rem;
         background-color: $bg-color-dark;
-
-        h3 {
-            font-size: 5rem;
-        }
+        color: $bg-color-light;
     }
 }
 .navbar {
@@ -68,7 +66,7 @@ $transclucent: 0.8;
             }
 
             &:hover {
-                background: $link-hover-color;
+                background: $nav-link-hover-color;
             }
         }
     }
@@ -131,8 +129,9 @@ a {
     .image-info {
         justify-content: space-between;
         .map-container {
-            width: 100%;
             aspect-ratio: 1;
+
+            width: 90%;
             align-self: center;
         }
     }
@@ -149,6 +148,14 @@ a {
         a {
             font-size: 5rem;
             margin: 2rem;
+
+            &:hover {
+                color: $a-link-hover-color;
+            }
+
+            svg {
+                cursor: pointer;
+            }
         }
     }
 

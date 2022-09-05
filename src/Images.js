@@ -5,10 +5,11 @@ import image4 from "./images/web/04.webp"
 
 // const IMAGE_PATH = "./images/web"
 class Image {
-    constructor(src, alt, location) {
+    constructor(src, alt, location, story) {
         this.src = src
         this.alt = alt
         this.location = location
+        this.story = story
     }
 }
 
