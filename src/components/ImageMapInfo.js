@@ -15,7 +15,7 @@ const ImageMapInfo = () => {
                     <GoogleMap
                         zoom={10}
                         center={center}
-                        mapContainerStyle={{ width: "300px", height: "300px" }}
+                        mapContainerStyle={{ width: "100%", height: "100%" }}
                     >
                         <MarkerF position={{ lat: 44, lng: -80 }} />
                     </GoogleMap>

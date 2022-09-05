@@ -15,11 +15,11 @@ const ImageInfoPage = () => {
             <div className="image-container">
                 <img src={image.src} alt={image.alt} />
             </div>
-            <div class="image-info">
+            <div className="side image-info">
                 <ImageHeader title="Title" />
-                <h2>Story behind the image</h2>
-                <h2>Location: Cornwall</h2>
-                <h2>Date: 01/01/2000</h2>
+                <h3>Story behind the image</h3>
+                <h3>Location: India</h3>
+                <h3>Date: 01/01/2000</h3>
 
                 <ImageMapInfo />
             </div>

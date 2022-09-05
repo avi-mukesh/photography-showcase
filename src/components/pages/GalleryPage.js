@@ -15,7 +15,7 @@ const GalleryPage = () => {
             <main
                 className="content"
                 id="gallery"
-                style={{ gap: loading ? "100px" : "0px" }}
+                style={{ gap: loading ? "20px" : "0px" }}
             >
                 {galleryImages.map((image, i) => (
                     <GalleryImage image={image} key={i} id={i} />

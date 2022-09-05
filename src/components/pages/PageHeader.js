@@ -16,9 +16,4 @@ const MIDDLE = {
     top: "50%",
     transform: "translateY(-50%)",
 }
-
-const TOP = {
-    position: "relative",
-}
-
 export default PageHeader

@@ -1,36 +1,58 @@
+$header-font-color: white;
+$bg-color-light: rgb(228, 228, 228);
+$bg-color-dark: rgb(47, 47, 47);
+$link-hover-color: rgb(192, 192, 192);
+$transclucent: 0.8;
+
+// BIG UI COMPONENTS
 .header {
-    opacity: 0.8;
+    opacity: $transclucent;
     width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
     cursor: default;
+    font-family: "Manrope", sans-serif;
 
     h1 {
         padding: 2px;
         font-size: 8rem;
-        color: white;
+        color: $header-font-color;
         background-color: transparent;
         border: 4px solid;
     }
 }
 .content {
-    background-color: rgb(228, 228, 228);
+    background-color: $bg-color-light;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
+    .side {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-items: center;
+        height: 100%;
+        padding: 0 1rem 1rem 1rem;
+        background-color: $bg-color-dark;
+
+        h3 {
+            font-size: 5rem;
+        }
+    }
+}
 .navbar {
     z-index: 1;
     position: fixed;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    border: 2px solid white;
-    opacity: 0.8;
+    border: 2px solid $header-font-color;
+    opacity: $transclucent;
 
     .nav-links {
         display: flex;
@@ -40,34 +62,33 @@
             padding: 2px;
             list-style: none;
             color: black;
-            background: white;
+            background: $bg-color-light;
             a {
-                outline: none;
                 font-size: 1.25rem;
-                text-decoration: none;
-                cursor: default;
-
-                &:active {
-                    color: black;
-                }
             }
 
             &:hover {
-                background: rgb(236, 236, 236);
+                background: $link-hover-color;
             }
         }
     }
 }
 
+// SMALL UI COMPONENTS
+a {
+    color: $bg-color-dark;
+    text-decoration: none;
+    cursor: default;
+
+    &:active {
+        color: black;
+    }
+}
+
 // LANDING PAGE
 #background {
-    background-color: rgb(228, 228, 228);
-    width: 100%;
     height: 100%;
     display: flex;
-    // grid-template-columns: repeat(4, 25%);
-
-    // transition: grid-template-columns 2s;
     transition: gap 2s ease-out;
 }
 .background-image {
@@ -79,8 +100,6 @@
 
 // GALLERY PAGE
 #gallery {
-    background-color: rgb(228, 228, 228);
-    height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -92,6 +111,7 @@
     .gallery-image-container {
         text-align: center;
         img {
+            transition: transform 0.2s ease-in;
             width: 80%;
         }
     }
@@ -101,29 +121,45 @@
 .image-info-page {
     .image-container {
         text-align: center;
-        margin: 7rem;
         width: 70%;
+        margin: 5%;
         img {
             width: 100%;
         }
     }
 
     .image-info {
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        color: white;
-        align-items: center;
         justify-content: space-between;
-        padding: 0 1rem 1rem 1rem;
-        height: 100%;
-        background-color: rgb(47, 47, 47);
-        h2 {
-            font-size: 2rem;
-        }
-
         .map-container {
+            width: 100%;
+            aspect-ratio: 1;
             align-self: center;
+        }
+    }
+}
+
+#contact-page {
+    .contact-platforms {
+        width: 70%;
+        margin: 5%;
+        text-align: center;
+        h2 {
+            margin-bottom: 2rem;
+        }
+        a {
+            font-size: 5rem;
+            margin: 2rem;
+        }
+    }
+
+    .contact-details {
+        justify-content: center;
+        .contact-detail {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 2rem;
         }
     }
 }
