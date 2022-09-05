@@ -7,27 +7,29 @@ import GalleryPage from "./components/pages/GalleryPage"
 import ImageInfoPage from "./components/pages/ImageInfoPage"
 import ContactPage from "./components/pages/ContactPage"
 
+import { images } from "./Images"
+import { ImageContext } from "./contexts/ImageContext"
+
 const App = () => {
-    // const handleMouseOver = (i) => {}
-
     return (
-        <Router>
-            <Routes>
-                <Route element={<Layout />}>
-                    <Route path="/" element={<LandingPage />} />
+        <ImageContext.Provider value={images}>
+            <Router>
+                <Routes>
+                    <Route element={<Layout />}>
+                        <Route path="/" element={<LandingPage />} />
+                        <Route path="/gallery">
+                            <Route index element={<GalleryPage />} />
+                            <Route
+                                path="/gallery/:id"
+                                element={<ImageInfoPage />}
+                            />
+                        </Route>
 
-                    <Route path="/gallery">
-                        <Route index element={<GalleryPage />} />
-                        <Route
-                            path="/gallery/:id"
-                            element={<ImageInfoPage />}
-                        />
+                        <Route path="/contact" element={<ContactPage />} />
                     </Route>
-
-                    <Route path="/contact" element={<ContactPage />} />
-                </Route>
-            </Routes>
-        </Router>
+                </Routes>
+            </Router>
+        </ImageContext.Provider>
     )
 }
 

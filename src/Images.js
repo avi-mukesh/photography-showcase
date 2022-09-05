@@ -1,14 +1,3 @@
-import image1 from "./images/web/01.webp"
-import image2 from "./images/web/02.webp"
-import image3 from "./images/web/03.webp"
-import image4 from "./images/web/04.webp"
-
-// import image2 from "./images/yuv1.jpg"
-// import image1 from "./images/yuv2.jpg"
-// import image3 from "./images/yuv3.jpg"
-// import image4 from "./images/yuv4.jpg"
-
-// const IMAGE_PATH = "./images/web"
 class Image {
     constructor(src, alt, location, story, title) {
         this.src = src
@@ -18,23 +7,6 @@ class Image {
         this.title = title
     }
 }
-
-export const bgImages = [
-    new Image(image1, "alt text", "Somewhere"),
-    new Image(image2, "alt text", "Somewhere"),
-    new Image(image3, "alt text", "Somewhere"),
-    new Image(image4, "alt text", "Somewhere"),
-]
-// export const galleryImages = [
-//     new Image(image1, "alt text", "Somewhere"),
-//     new Image(image2, "alt text", "Somewhere"),
-//     new Image(image3, "alt text", "Somewhere"),
-//     new Image(image4, "alt text", "Somewhere"),
-//     new Image(image1, "alt text", "Somewhere"),
-//     new Image(image2, "alt text", "Somewhere"),
-//     new Image(image3, "alt text", "Somewhere"),
-//     new Image(image4, "alt text", "Somewhere"),
-// ]
 
 function importAll(r) {
     let images = {}
@@ -123,7 +95,7 @@ const imageTitles = [
     "Denis in Venice",
 ]
 
-export const galleryImages = new Array(imageAlts.length).fill(0).map(
+export const images = new Array(imageAlts.length).fill(0).map(
     (_, i) =>
         new Image(
             imagePaths[

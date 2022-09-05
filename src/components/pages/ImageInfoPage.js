@@ -1,13 +1,13 @@
 import React from "react"
 import { useParams } from "react-router-dom"
-import { galleryImages } from "../../Images"
 import SideHeader from "./SideHeader"
 import ImageMapInfo from "../ImageMapInfo"
+import useImages from "../../hooks/useImages"
 
 const ImageInfoPage = () => {
     const params = useParams()
-
-    const image = galleryImages[params.id]
+    const images = useImages()
+    const image = images[params.id]
 
     return (
         <main className="content image-info-page">

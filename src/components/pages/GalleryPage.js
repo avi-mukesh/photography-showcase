@@ -1,18 +1,18 @@
 import React from "react"
-import PageHeader from "./PageHeader"
 
-import { galleryImages } from "../../Images"
+import PageHeader from "./PageHeader"
 import GalleryImage from "../GalleryImage"
 
+import useImages from "../../hooks/useImages"
+
 const GalleryPage = () => {
+    const images = useImages()
+
     return (
         <>
             <PageHeader title="Gallery" positionMiddle={false} />
-            <main
-                className="content"
-                id="gallery"
-            >
-                {galleryImages.map((image, i) => (
+            <main className="content" id="gallery">
+                {images.map((image, i) => (
                     <GalleryImage image={image} key={i} id={i} />
                 ))}
             </main>
