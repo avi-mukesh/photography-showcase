@@ -1,5 +1,5 @@
 // components
-import React, { useState } from "react"
+import React from "react"
 import Background from "../Background"
 import BackgroundImage from "../BackgroundImage"
 
@@ -13,11 +13,7 @@ const LandingPage = () => {
 
             <Background>
                 {bgImages.map((image, i) => (
-                    <BackgroundImage
-                        bgSource={image.src}
-                        key={i}
-                        index={i}
-                    />
+                    <BackgroundImage bgSource={image.src} key={i} index={i} />
                 ))}
             </Background>
         </>

@@ -1,12 +1,12 @@
 import React, { useMemo } from "react"
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api"
 
-const ImageMapInfo = () => {
+const ImageMapInfo = ({ location }) => {
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: "AIzaSyD_1DmSW9bdOSk3Axma6asbryCJAV_2aTM",
     })
 
-    const center = useMemo(() => ({ lat: 44, lng: -80 }), [])
+    const center = useMemo(() => location, [location])
 
     return (
         <>
@@ -17,7 +17,7 @@ const ImageMapInfo = () => {
                         center={center}
                         mapContainerStyle={{ width: "100%", height: "100%" }}
                     >
-                        <MarkerF position={{ lat: 44, lng: -80 }} />
+                        <MarkerF position={center} />
                     </GoogleMap>
                 </div>
             ) : (

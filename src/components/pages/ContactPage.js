@@ -1,9 +1,9 @@
 import ContactButton from "../ContactButton"
 import ContactDetail from "../ContactDetail"
-import PageHeader from "./PageHeader"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
+import SideHeader from "./SideHeader"
 library.add(fab)
 
 const ContactPage = () => {
@@ -28,11 +28,17 @@ const ContactPage = () => {
                     />
                 </div>
                 <div className="side contact-details">
-                    <ContactDetail title="Phone number" value="07447655785" />
-                    <ContactDetail
-                        title="Email "
-                        value="avimukesh10@gmail.com"
-                    />
+                    <SideHeader title="Contact" />
+                    <div className="details">
+                        <ContactDetail
+                            title="Phone number"
+                            value="07447655785"
+                        />
+                        <ContactDetail
+                            title="Email "
+                            value="avimukesh10@gmail.com"
+                        />
+                    </div>
                 </div>
             </main>
         </>
