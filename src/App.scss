@@ -132,12 +132,31 @@ a {
 // SPECIFIC IMAGE PAGE
 .image-info-page {
     .image-container {
-        text-align: center;
-        width: 70%;
-        margin: 5%;
-        img {
-            max-width: 100%;
-            max-height: 90vh; //needed for tall images
+        margin: auto;
+        position: relative;
+        .fullscreen {
+            img {
+                max-width: 100%;
+                max-height: 90vh; //needed for tall images
+            }
+            .btn-fullscreen-control {
+                align-self: flex-start;
+                font-size: 1.5rem;
+                right: 0;
+                padding: 1px;
+                opacity: 0.5;
+                position: absolute;
+                background-color: $bg-color-light;
+                color: $bg-color-dark;
+
+                cursor: pointer;
+            }
+        }
+
+        .fullscreen-enabled {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -203,6 +222,9 @@ a {
 @media (max-height: 768px), (max-width: 786px) {
     .content {
         .side {
+            &::-webkit-scrollbar {
+                width: 0;
+            }
             .side-header {
                 h1 {
                     font-size: 2.5rem;
@@ -256,7 +278,6 @@ a {
 
             .side-header {
                 grid-column: 1 / span 2;
-
             }
         }
     }
@@ -287,7 +308,6 @@ a {
             justify-content: center;
             .map-container {
                 align-self: auto;
-                max-height: 60%;
                 width: 100%;
             }
         }

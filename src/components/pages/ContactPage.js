@@ -2,9 +2,10 @@ import ContactButton from "../ContactButton"
 import ContactDetail from "../ContactDetail"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
+import { faExpand, faWindowClose } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import SideHeader from "./SideHeader"
-library.add(fab)
+library.add(fab, faExpand, faWindowClose)
 
 const ContactPage = () => {
     return (
