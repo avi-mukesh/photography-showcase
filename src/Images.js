@@ -77,10 +77,10 @@ const imageStories = [
 ]
 
 const imageTitles = [
-    "A pheasant surprise", // A pheasant surprise
+    "Pheasant surprise", // A pheasant surprise
     "H20",
     "Spooky manny",
-    "Garden from sky garden",
+    "Sky garden",
     "Leeds legs", //bird on rock
     "SQRL",
     "Mother nature",
@@ -90,9 +90,9 @@ const imageTitles = [
     "Mukesh", //dad audi
     "Sushi", //sushi
     "Soho mixy", //mixed grill
-    "Hanbou hanbou hanbou", //hanbou
+    "Hanbou", //hanbou
     "Peng pasta", //
-    "Denis in Venice",
+    "Venice",
 ]
 
 export const images = new Array(imageAlts.length).fill(0).map(
