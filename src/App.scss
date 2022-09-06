@@ -132,8 +132,9 @@ a {
 // SPECIFIC IMAGE PAGE
 .image-info-page {
     .image-container {
-        margin: auto 4%;
+        margin: 4% auto;
         position: relative;
+        max-width: 70%;
         .fullscreen {
             img {
                 max-width: 100%;
