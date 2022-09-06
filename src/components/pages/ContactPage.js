@@ -14,18 +14,20 @@ const ContactPage = () => {
                 <div className="contact-platforms">
                     <h2>You can find me on these platforms</h2>
 
-                    <ContactButton
-                        brand="github"
-                        link="https://github.com/avi-mukesh"
-                    />
-                    <ContactButton
-                        brand="linkedin"
-                        link="https://www.linkedin.com/in/avi-mukesh/"
-                    />
-                    <ContactButton
-                        brand="instagram"
-                        link="https://www.instagram.com/avimu_photo/"
-                    />
+                    <div className="platforms">
+                        <ContactButton
+                            brand="github"
+                            link="https://github.com/avi-mukesh"
+                        />
+                        <ContactButton
+                            brand="linkedin"
+                            link="https://www.linkedin.com/in/avi-mukesh/"
+                        />
+                        <ContactButton
+                            brand="instagram"
+                            link="https://www.instagram.com/avimu_photo/"
+                        />
+                    </div>
                 </div>
                 <div className="side contact-details">
                     <SideHeader title="Contact" />
