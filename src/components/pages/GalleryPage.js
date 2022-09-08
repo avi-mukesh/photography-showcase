@@ -10,7 +10,7 @@ const GalleryPage = () => {
 
     return (
         <>
-            <PageHeader title="Gallery" positionMiddle={false} />
+            <PageHeader title="Gallery" />
             <main className="content" id="gallery">
                 {images.map((image, i) => (
                     <GalleryImage image={image} key={i} id={i} />
