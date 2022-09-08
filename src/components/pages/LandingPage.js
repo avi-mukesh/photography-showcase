@@ -4,14 +4,18 @@ import useImages from "../../hooks/useImages"
 
 import Background from "../Background"
 import BackgroundImage from "../BackgroundImage"
-import PageHeader from "./PageHeader"
+import LandingPageHeader from "../headers/LandingPageHeader"
 
 const LandingPage = () => {
     const images = useImages()
-    const bgImages = images.slice(0, 4)
+    const bgImages = images
+        .map((img) => ({ img, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ img }) => img)
+        .slice(0, 4)
     return (
         <>
-            <PageHeader title="AVI PHOTO" positionMiddle={true} />
+            <LandingPageHeader title="AVI PHOTO" />
 
             <Background>
                 {bgImages.map((image, i) => (

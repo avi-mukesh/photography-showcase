@@ -1,6 +1,6 @@
 import React from "react"
 
-import PageHeader from "./PageHeader"
+import PageHeader from "../headers/PageHeader"
 import GalleryImage from "../GalleryImage"
 
 import useImages from "../../hooks/useImages"

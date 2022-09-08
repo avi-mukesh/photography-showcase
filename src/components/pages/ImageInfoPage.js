@@ -3,7 +3,7 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen"
 
 import { useParams } from "react-router-dom"
 
-import SideHeader from "./SideHeader"
+import SideHeader from "../headers/SideHeader"
 import ImageMapInfo from "../ImageMapInfo"
 
 import useImages from "../../hooks/useImages"
@@ -25,6 +25,7 @@ const ImageInfoPage = () => {
                         <button
                             className="btn-fullscreen-control"
                             onClick={handle.exit}
+                            title="Exit fullscreen"
                         >
                             <FontAwesomeIcon icon="window-close"></FontAwesomeIcon>
                         </button>
@@ -32,6 +33,7 @@ const ImageInfoPage = () => {
                         <button
                             className="btn-fullscreen-control"
                             onClick={handle.enter}
+                            title="Fullscreen"
                         >
                             <FontAwesomeIcon icon="expand"></FontAwesomeIcon>
                         </button>
@@ -40,10 +42,10 @@ const ImageInfoPage = () => {
             </div>
             <div className="side image-info">
                 <SideHeader title={image.title} />
-                <section className="info">
-                    <h3>Story behind the image</h3>
+                <div className="info">
+                    <h2>Story behind the image</h2>
                     <p>{image.story}</p>
-                </section>
+                </div>
                 <ImageMapInfo location={image.location} />
             </div>
         </main>

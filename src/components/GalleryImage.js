@@ -17,6 +17,7 @@ const GalleryImage = ({ image, id }) => {
         <div
             className="gallery-image-container"
             style={{ opacity: overlay ? 0.9 : 1 }}
+            title={image.title}
         >
             <img
                 onMouseEnter={() => setOverlay(true)}

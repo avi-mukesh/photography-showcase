@@ -4,13 +4,12 @@ import ContactDetail from "../ContactDetail"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faExpand, faWindowClose } from "@fortawesome/free-solid-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
-import SideHeader from "./SideHeader"
+import SideHeader from "../headers/SideHeader"
 library.add(fab, faExpand, faWindowClose)
 
 const ContactPage = () => {
     return (
         <>
-            {/* <PageHeader title="Contact" positionMiddle={false} /> */}
             <main className="content" id="contact-page">
                 <div className="contact-platforms">
                     <h2>You can find me on these platforms</h2>

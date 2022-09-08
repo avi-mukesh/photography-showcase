@@ -5,9 +5,15 @@ $nav-link-hover-color: rgb(192, 192, 192);
 $a-link-hover-color: rgb(10, 10, 10);
 $transclucent: 0.8;
 
-// BIG UI COMPONENTS
+// UTILITY CLASSES
+.glass {
+    background: rgba(228, 228, 228, 0.2);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+// SHARED BIG UI COMPONENTS
 .header {
-    opacity: $transclucent;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -16,13 +22,12 @@ $transclucent: 0.8;
     font-family: "Manrope", sans-serif;
 
     h1 {
-        padding: 2px;
-        font-size: 8rem;
+        padding: 4px;
+        font-size: 5rem;
         color: $header-font-color;
-        background-color: transparent;
-        border: 4px solid;
     }
 }
+
 .content {
     background-color: $bg-color-light;
     height: 100%;
@@ -48,7 +53,7 @@ $transclucent: 0.8;
             }
         }
 
-        h3 {
+        h2 {
             font-size: 2rem;
         }
 
@@ -63,25 +68,29 @@ $transclucent: 0.8;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    border: 2px solid $header-font-color;
     opacity: $transclucent;
 
     .nav-links {
         display: flex;
-        margin: 3px;
-        gap: 3px;
+        margin: 5px;
+        gap: 5px;
         .nav-link {
             padding: 2px;
             list-style: none;
             color: black;
             background: $bg-color-light;
             a {
+                cursor: pointer;
                 font-size: 1.2rem;
             }
 
             &:hover {
                 background: $nav-link-hover-color;
             }
+        }
+
+        .nav-link-active {
+            background: $nav-link-hover-color;
         }
     }
 }
@@ -98,6 +107,17 @@ a {
 }
 
 // LANDING PAGE
+.landing-page-header {
+    width: auto;
+    padding: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+        border: 4px solid;
+    }
+}
 #background {
     height: 100%;
     display: flex;
@@ -132,22 +152,24 @@ a {
 // SPECIFIC IMAGE PAGE
 .image-info-page {
     .image-container {
-        margin: 4% auto;
+        margin: auto;
         position: relative;
         max-width: 70%;
         .fullscreen {
+            height: 100%;
             img {
                 max-width: 100%;
                 max-height: 90vh; //needed for tall images
             }
             .btn-fullscreen-control {
+                margin: 5px;
                 align-self: flex-start;
                 font-size: 1.5rem;
                 right: 0;
-                padding: 1px;
+                padding: 2px;
                 opacity: 0.5;
                 position: absolute;
-                background-color: $bg-color-light;
+                background-color: #fff;
                 color: $bg-color-dark;
 
                 cursor: pointer;
@@ -172,9 +194,9 @@ a {
         }
 
         .info {
-            h3 {
-                margin-bottom: 2px;
-            }
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
         }
     }
 }
@@ -182,12 +204,11 @@ a {
 // CONTACT PAGE
 #contact-page {
     .contact-platforms {
-        width: 70%;
-        margin: 5%;
+        margin: auto;
         text-align: center;
-        h2 {
-            margin-bottom: 2rem;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
         a {
             font-size: 5rem;
             margin: 2rem;
@@ -228,25 +249,17 @@ a {
             }
             .side-header {
                 h1 {
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                 }
             }
 
-            h3 {
+            h2 {
                 font-size: 1.5rem;
             }
 
             p {
                 font-size: 1.25rem;
             }
-        }
-    }
-}
-
-@media (max-height: 768px) {
-    .header {
-        h1 {
-            font-size: 4rem;
         }
     }
 }
@@ -291,19 +304,23 @@ a {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100%;
-            max-width: 80%;
-            margin: 2px;
+            max-height: 60%;
+            margin: auto;
+
+            .fullscreen {
+                img {
+                    max-height: 100%;
+                }
+            }
         }
 
         .image-info {
             display: grid;
-            gap: 1rem;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            justify-content: center;
+            grid-template-rows: 20% 1fr;
+            align-items: flex-start;
+
             .map-container {
-                align-self: auto;
                 width: 100%;
             }
         }
@@ -311,7 +328,7 @@ a {
 
     #contact-page {
         .contact-platforms {
-            height: 70%;
+            height: 60%;
             display: flex;
             flex-direction: column;
             justify-content: center;

@@ -1,9 +1,11 @@
 import React from "react"
 import Navlink from "./Navlink"
 
+
 const Navbar = () => {
+
     return (
-        <nav className="navbar">
+        <nav className="navbar glass">
             <ul className="nav-links">
                 <Navlink title="Home" to="/" />
                 <Navlink title="Gallery" to="/gallery" />
