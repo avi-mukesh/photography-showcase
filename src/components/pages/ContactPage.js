@@ -35,10 +35,12 @@ const ContactPage = () => {
                         <ContactDetail
                             title="Phone number"
                             value="07447655785"
+                            action="tel"
                         />
                         <ContactDetail
-                            title="Email "
+                            title="Email"
                             value="avimukesh10@gmail.com"
+                            action="mailto"
                         />
                     </div>
                 </div>
